@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Install dev dependencies",
+            "type": "shell",
+            "command": "python -m pip install --upgrade pip && python -m pip install -r requirements-dev.txt",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run tests",
+            "type": "shell",
+            "command": "pytest -q",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$pytest"
+            ]
+        },
+        {
+            "label": "Lint code",
+            "type": "shell",
+            "command": "python -m ruff check src tests",
+            "problemMatcher": []
+        },
+        {
+            "label": "Type check",
+            "type": "shell",
+            "command": "python -m mypy src tests",
+            "problemMatcher": []
+        },
+        {
+            "label": "Format code",
+            "type": "shell",
+            "command": "python -m black src tests",
+            "problemMatcher": []
+        }
+    ]
+}

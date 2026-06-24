@@ -1,0 +1,39 @@
+[project]
+name = "software-engineer"
+version = "0.1.0"
+description = "A simple configurable Python greeting CLI."
+readme = "README.md"
+dependencies = []
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "22boikanyo10-rgb" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License"
+]
+
+[project.scripts]
+software-engineer = "software_engineer.__main__:main"
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.0",
+    "ruff>=0.0.280",
+    "mypy>=1.9",
+    "pytest>=7.0"
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
