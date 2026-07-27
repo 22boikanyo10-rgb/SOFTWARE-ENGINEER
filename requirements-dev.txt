@@ -1,1 +1,16 @@
--e .[dev]
+-r requirements.txt
+
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+httpx==0.25.1
+black==23.11.0
+flake8==6.1.0
+isort==5.13.2
+mypy==1.7.1
+types-requests==2.31.0.10
+pylint==3.0.3
+bandit==1.7.5
+safety==2.3.5
+pre-commit==3.5.0
