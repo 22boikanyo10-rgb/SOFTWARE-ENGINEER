@@ -1,1 +1,4 @@
--e .[dev]
+pytest>=7.0
+black>=24.0
+ruff>=0.0.280
+mypy>=1.9
